@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t mrwin95/frontend -f Dockerfile.dev .
+  - docker build -t mrwin95/frontend:1 -f Dockerfile.dev .
 
 deploy:
   provider: elasticbeantalk
