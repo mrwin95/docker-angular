@@ -1,4 +1,6 @@
-language: node
+language: node_js
+node_js:
+  - "12"
 sudo: required
 services:
   - docker
@@ -7,3 +9,15 @@ before_install:
   - docker build -t mrwin95/frontdend -f Dockerfile.dev .
 #script:
 #  - docker run mrwin95/frontdend npm run test
+
+deploy:
+  provider: elasticbeantalk
+  region: "ap-southeast-1"
+  app: "docker-angular"
+  env: "DockerAngular-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-009876694182"
+  bucket_path: "docker-angular"
+  on:
+    branch: master
+
+  #DockerAngular-env.eba-ufzm2p3k.ap-southeast-1.elasticbeanstalk.com
