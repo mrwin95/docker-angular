@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t mrwin95/frontdend -f Dockerfile.dev .
+#script:
+#  - docker run mrwin95/frontdend npm run test
