@@ -11,7 +11,7 @@ before_install:
 script: 'true'
 
 deploy:
-  provider: elasticbeantalk
+  provider: elasticbeanstalk
   region: "ap-southeast-1"
   app: "docker-angular"
   env: "DockerAngular-env"
