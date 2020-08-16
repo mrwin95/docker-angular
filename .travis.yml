@@ -13,10 +13,10 @@ script: 'true'
 deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-1"
-  app: "docker-angular"
-  env: "DockerAngular-env"
+  app: "docker-angular-web"
+  env: "DockerAngularWeb-env"
   bucket_name: "elasticbeanstalk-ap-southeast-1-009876694182"
-  bucket_path: "docker-angular"
+  bucket_path: "docker-angular-web"
   on:
     branch: master
 
