@@ -8,6 +8,8 @@ services:
 before_install:
   - docker build -t mrwin95/frontend:1 -f Dockerfile.dev .
 
+script: 'true'
+
 deploy:
   provider: elasticbeantalk
   region: "ap-southeast-1"
