@@ -6,9 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t mrwin95/frontdend -f Dockerfile.dev .
-#script:
-#  - docker run mrwin95/frontdend npm run test
+  - docker build -t mrwin95/frontend -f Dockerfile.dev .
 
 deploy:
   provider: elasticbeantalk
@@ -23,4 +21,3 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "$AWS_SECRET_KEY"
-  #DockerAngular-env.eba-ufzm2p3k.ap-southeast-1.elasticbeanstalk.com
